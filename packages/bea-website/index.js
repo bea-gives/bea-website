@@ -7,9 +7,9 @@ import '../bea-website-home/index.js';
  * Entry point element
  * @hideconstructor
  * @example
- * <bea-website-main></bea-website-main>
+ * <bea-website></bea-website>
  */
-window.customElements.define('bea-website-main', class extends HTMLElement {
+window.customElements.define('bea-website', class extends HTMLElement {
   constructor() {
     super();
 

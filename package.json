@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "description": "Béa website",
+  "type": "module",
   "scripts": {
-    "build": "esbuild node_modules/@bea-org/bea-website-main/index.js --outfile=build/index.js --bundle --minify --preserve-symlinks --target=safari13",
-    "build-watch": "yarn build --watch",
-    "start": "server",
+    "build": "node scripts.js build",
+    "start": "node scripts.js start",
     "test": "eslint packages",
     "update": "yarn",
     "upgrade": "yarn install && yarn upgrade-interactive --latest"

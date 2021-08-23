@@ -15,7 +15,7 @@ switch (process.argv[2]) {
   case 'start':
     const server = new Server({
       watch: true,
-      watchIgnore: '**/*.js',
+      watchIgnore: ['**/*.js', '**/*.css'],
     });
 
     esbuild.build({

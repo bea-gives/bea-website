@@ -11,6 +11,8 @@ window.customElements.define('bea-website-mailchimpform', class extends HTMLElem
     super();
 
     this.attachShadow({ mode: 'open' }).innerHTML = `<style>
+  @import "./node_modules/@bea-org/bea-color/index.css";
+
   :host {
     display: grid;
     position: relative;
@@ -33,7 +35,7 @@ window.customElements.define('bea-website-mailchimpform', class extends HTMLElem
     color: var(--bea-color-black);
     box-sizing: border-box;
   }
-  
+
   input::placeholder {
     color: var(--bea-color-black);
     opacity: .3;
@@ -45,6 +47,7 @@ window.customElements.define('bea-website-mailchimpform', class extends HTMLElem
   }
 
   bea-website-button {
+    background-color: var(--bea-color-blue);
     padding: 20px 40px;
   }
 </style>

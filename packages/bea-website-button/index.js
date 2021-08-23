@@ -19,7 +19,8 @@ window.customElements.define('bea-website-button', class extends AnimationTicker
 
     this.attachShadow({ mode: 'open' }).innerHTML = `<style>
   :host {
-    --background-color: #6091FF;
+    background-color: lightgrey;
+    border-radius: 50%;
     font-family: Pangram, sans-serif;
     font-weight: 700;
     display: grid;
@@ -88,9 +89,6 @@ window.customElements.define('bea-website-button', class extends AnimationTicker
     this._glslCanvas = this.shadowRoot.querySelector('damo-glslcanvas');
     this._glslCanvas.style.setProperty('--hover-margin', `${HOVER_MARGIN}px`);
     this._glslCanvas.shader = {
-      uniforms: {
-        color: Color.styleToRGBA(getComputedStyle(this).getPropertyValue('--background-color')),
-      },
       fragmentChunks: [
         ['start', `
           uniform vec4 color;
@@ -165,6 +163,7 @@ window.customElements.define('bea-website-button', class extends AnimationTicker
     this._pointerPositionEased.lerp(this._pointerPosition, .2);
     this._glslCanvas.draw({
       uniforms: {
+        color: Color.styleToRGBA(getComputedStyle(this).getPropertyValue('background-color')),
         pointerHover: this._pointerHover,
         pointerPosition: this._pointerPositionEased,
       },

@@ -1,5 +1,7 @@
 import '../bea-website-button/index.js';
 
+const isFR = navigator.languages.includes('fr') || navigator.languages.includes('FR-fr');
+
 /**
  * Entry point element
  * @hideconstructor
@@ -53,12 +55,12 @@ window.customElements.define('bea-website-mailchimpform', class extends HTMLElem
 </style>
 <form action="https://gives.us8.list-manage.com/subscribe/post?u=9478a676a23e73e9922afc992&amp;id=9e77fea305"
   method="post" target="_blank" novalidate>
-  <input type="email" value="" name="EMAIL" placeholder="Entrez votre adresse email">
+  <input type="email" value="" name="EMAIL" placeholder="${isFR ? 'Entrez votre adresse email' : 'Enter your email'}">
   <input type="submit" style="display: none;">
   <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
   <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
       name="b_9478a676a23e73e9922afc992_9e77fea305" tabindex="-1" value=""></div>
-  <bea-website-button>M'inscrire</bea-website-button>
+  <bea-website-button>${isFR ? 'M\'inscrire' : 'Subscribe'}</bea-website-button>
 </form>`;
 
     const submitButton = this.shadowRoot.querySelector('bea-website-button');

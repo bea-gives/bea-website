@@ -4,6 +4,8 @@ import '../bea-website-mailchimpform/index.js';
 import '../bea-website-animatedtext/index.js';
 import '../bea-icon/index.js';
 
+const isFR = navigator.languages.includes('fr') || navigator.languages.includes('FR-fr');
+
 /**
  * Entry point element
  * @hideconstructor
@@ -317,11 +319,11 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
   <h2>
     <!-- <bea-icon id="asterisk" icon="asterisk" type="fill"></bea-icon> -->
     <span id="logo">Béa</span>
-    <span>le don</span>
+    <span>${isFR ? 'le don' : 'donation<br>made'}</span>
     <bea-website-animatedtext></bea-website-animatedtext>
   </h2>
-  <p>L’application mobile bénévole qui simplifie <span>(enfin)</span> le don aux associations</p>
-  <bea-website-button id="emailformbutton">Tenez-moi informé(e)</bea-website-button>
+  <p>${isFR ? 'L’application mobile bénévole qui simplifie <span>(enfin)</span> le don aux associations' : 'The nonprofit app making donation <span>(finally)</span> effortless'}</p>
+  <bea-website-button id="emailformbutton">${isFR ? 'Tenez-moi informé(e)' : 'Keep me posted!'}</bea-website-button>
 </div>
 <div id="media">
   <bea-website-backgroundcircle></bea-website-backgroundcircle>
@@ -335,7 +337,7 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
 </div>
 <div id="overlay"></div>
 <section id="emailformpopin" hidden>
-  <div id="emailformtitle">On vous en dit plus bientôt !</div>
+  <div id="emailformtitle">${isFR ? 'On vous en dit plus bientôt !' : 'We\'ll be in touch soon!'}</div>
   <bea-website-mailchimpform></bea-website-mailchimpform>
   <button id="emailformclosebutton">
     <bea-icon icon="close" type="fill"></bea-icon>
@@ -356,7 +358,7 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
 
     const animatedText = this.shadowRoot.querySelector('bea-website-animatedtext');
     const delay = 1500;
-    const words = ['facile', 'sécurisé', 'sur-mesure'];
+    const words = isFR ? ['facile', 'sécurisé', 'sur-mesure'] : ['easy', 'secure', 'on-demand'];
     const colors = ['var(--bea-color-green)', 'var(--bea-color-blue)', 'var(--bea-color-coral)'];
     let index = -1;
     const changeText = async () => {

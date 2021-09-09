@@ -108,7 +108,6 @@ window.customElements.define('bea-website-button', class extends AnimationTicker
           boxPosition *= marginSizeRatio;
           boxPosition.y *= 1. + -(cos(boxPosition.x * 1.67) * .5 + .5) * .2;
           boxPosition.x *= aspectRatio.x;
-          // boxPosition *= 1. - pointerDistance * .3;
           vec2 size = vec2(aspectRatio.x, .8);
           vec4 borderRadius = vec4(.55);
           borderRadius.xy = (boxPosition.x > 0.0) ? borderRadius.xy : borderRadius.zw;
@@ -118,11 +117,9 @@ window.customElements.define('bea-website-button', class extends AnimationTicker
           df -= pointerDistance * .2;
           df -= cos((1. - pointerHover) * (1. - pointerDistance) * 8.) * (1. - pointerHover) * .1 * smoothstep(0., .1, pointerHover);
 
-          float aa = 1. / min(glslCanvasSize.x, glslCanvasSize.y) * 1.5;
-          float opacity = 1. - smoothstep(-aa, 0., df);
+          float aa = 1. / min(boxSize.x, boxSize.y);
+          float opacity = 1. - smoothstep(-aa, aa, df);
           fragColor = vec4(color.rgb * opacity * color.a, opacity * color.a);
-          // fragColor = vec4(vec3(df), 1.);
-          // fragColor = vec4(vec3(pointerDistance), 1.);
         `],
       ],
     };
@@ -141,6 +138,16 @@ window.customElements.define('bea-website-button', class extends AnimationTicker
         duration: 600,
         easing: (x) => Easing.powerInOut(x),
       });
+    });
+
+    window.addEventListener('pointerup', (event) => {
+      this._pointerHovering = false;
+      if (event.pointerType === 'touch') {
+        this._pointerPosition.x = 0;
+        this._pointerPosition.y = 0;
+        this._pointerPositionEased.x = 0;
+        this._pointerPositionEased.y = 0;
+      }
     });
 
     this.addEventListener('pointerleave', (event) => {

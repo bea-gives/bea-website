@@ -1,4 +1,4 @@
-var ze=typeof require!="undefined"?require:i=>{throw new Error('Dynamic require of "'+i+'" is not supported')};var V=(i,e,t)=>{if(!e.has(i))throw TypeError("Cannot "+t)};var x=(i,e,t)=>(V(i,e,"read from private field"),t?t.call(i):e.get(i)),E=(i,e,t)=>{if(e.has(i))throw TypeError("Cannot add the same private member more than once");e instanceof WeakSet?e.add(i):e.set(i,t)},k=(i,e,t,s)=>(V(i,e,"write to private field"),s?s.call(i,t):e.set(i,t),t);var j=(i,e,t)=>(V(i,e,"access private method"),t);document.fonts.add(new FontFace("Mulish","url(node_modules/@bea-org/bea-font/mulish.woff2)"));document.fonts.add(new FontFace("Pangram","url(node_modules/@bea-org/bea-font/pangram-regular.woff2)"));document.fonts.add(new FontFace("Pangram","url(node_modules/@bea-org/bea-font/pangram-bold.woff2)",{weight:700}));document.fonts.add(new FontFace("Pangram","url(node_modules/@bea-org/bea-font/pangram-extrabold.woff2)",{weight:800}));window.customElements.define("bea-a",class extends HTMLElement{static get observedAttributes(){return["href","target"]}constructor(){super();this.attachShadow({mode:"open"}).innerHTML=`<style>
+var ze=typeof require!="undefined"?require:i=>{throw new Error('Dynamic require of "'+i+'" is not supported')};var V=(i,e,t)=>{if(!e.has(i))throw TypeError("Cannot "+t)};var x=(i,e,t)=>(V(i,e,"read from private field"),t?t.call(i):e.get(i)),E=(i,e,t)=>{if(e.has(i))throw TypeError("Cannot add the same private member more than once");e instanceof WeakSet?e.add(i):e.set(i,t)},k=(i,e,t,s)=>(V(i,e,"write to private field"),s?s.call(i,t):e.set(i,t),t);var j=(i,e,t)=>(V(i,e,"access private method"),t);document.fonts.add(new FontFace("Mulish","url(node_modules/@bea-gives/bea-font/mulish.woff2)"));document.fonts.add(new FontFace("Pangram","url(node_modules/@bea-gives/bea-font/pangram-regular.woff2)"));document.fonts.add(new FontFace("Pangram","url(node_modules/@bea-gives/bea-font/pangram-bold.woff2)",{weight:700}));document.fonts.add(new FontFace("Pangram","url(node_modules/@bea-gives/bea-font/pangram-extrabold.woff2)",{weight:800}));window.customElements.define("bea-a",class extends HTMLElement{static get observedAttributes(){return["href","target"]}constructor(){super();this.attachShadow({mode:"open"}).innerHTML=`<style>
   :host {
     color: #6091FF;
     transition-property: color, text-shadow;
@@ -69,7 +69,7 @@ var ze=typeof require!="undefined"?require:i=>{throw new Error('Dynamic require 
     background-color: white;
   }
 </style>
-<div id="background"></div>`,fetch("node_modules/@bea-org/bea-logo/logo.svg").then(i=>i.text()).then(i=>{let e=document.createElement("template");e.innerHTML=i,this.shadowRoot.appendChild(e.content.cloneNode(!0))})}});window.customElements.define("bea-website-menu",class extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"}).innerHTML=`
+<div id="background"></div>`,fetch("node_modules/@bea-gives/bea-logo/logo.svg").then(i=>i.text()).then(i=>{let e=document.createElement("template");e.innerHTML=i,this.shadowRoot.appendChild(e.content.cloneNode(!0))})}});window.customElements.define("bea-website-menu",class extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"}).innerHTML=`
       <style>
         :host {
           display: grid;
@@ -274,7 +274,7 @@ at: ${p[a-1].replace(/^\s*/,"")}`)}else throw new Error(r)}let o=this._attachedS
           float opacity = 1. - smoothstep(-aa, aa, df);
           fragColor = vec4(color.rgb * opacity * color.a, opacity * color.a);
         `]]};let i;new ResizeObserver(()=>i=this._glslCanvas.getBoundingClientRect()).observe(this),window.addEventListener("resize",()=>i=this._glslCanvas.getBoundingClientRect()),this._pointerHovering=!1,this.addEventListener("pointerenter",e=>{i=this._glslCanvas.getBoundingClientRect(),this._pointerHovering=!0,Ae(this,{_pointerHover:1},{duration:600,easing:t=>w.powerInOut(t)})}),window.addEventListener("pointerup",e=>{this._pointerHovering=!1,e.pointerType==="touch"&&(this._pointerPosition.x=0,this._pointerPosition.y=0,this._pointerPositionEased.x=0,this._pointerPositionEased.y=0)}),this.addEventListener("pointerleave",e=>{this._pointerHovering=!1}),window.addEventListener("pointermove",e=>{!i||(this._pointerPosition.x=(e.clientX-i.x)/i.width*2-1,this._pointerPosition.y=-((e.clientY-i.y)/i.height*2-1))})}focus(){this._focusable.focus()}update(){this._pointerHovering||(this._pointerHover+=-this._pointerHover*.2),this._pointerPositionEased.lerp(this._pointerPosition,.2),this._glslCanvas.draw({uniforms:{color:Y.styleToRGBA(getComputedStyle(this).getPropertyValue("background-color")),pointerHover:this._pointerHover,pointerPosition:this._pointerPositionEased}})}});var Me=navigator.languages.includes("fr")||navigator.languages.includes("FR-fr");window.customElements.define("bea-website-mailchimpform",class extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"}).innerHTML=`<style>
-  @import "./node_modules/@bea-org/bea-color/index.css";
+  @import "./node_modules/@bea-gives/bea-color/index.css";
 
   :host {
     display: grid;
@@ -406,8 +406,8 @@ at: ${p[a-1].replace(/^\s*/,"")}`)}else throw new Error(r)}let o=this._attachedS
     height: var(--icon-size);
   }
 </style>
-<div id="icon-container"></div>`,this._iconContainer=this.shadowRoot.querySelector("#icon-container")}attributeChangedCallback(i,e,t){switch(i){case"icon":this._loadIcon(t);break}}async _loadIcon(i){let e=await fetch(`node_modules/@bea-org/bea-icon/${i}.svg`).then(t=>t.text());this._iconContainer.innerHTML=e}get icon(){return this.getAttribute("icon")}set icon(i){this.setAttribute("icon",i)}});var $=navigator.languages.includes("fr")||navigator.languages.includes("FR-fr");window.customElements.define("bea-website-home",class extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"}).innerHTML=`<style>
-  @import "./node_modules/@bea-org/bea-color/index.css";
+<div id="icon-container"></div>`,this._iconContainer=this.shadowRoot.querySelector("#icon-container")}attributeChangedCallback(i,e,t){switch(i){case"icon":this._loadIcon(t);break}}async _loadIcon(i){let e=await fetch(`node_modules/@bea-gives/bea-icon/${i}.svg`).then(t=>t.text());this._iconContainer.innerHTML=e}get icon(){return this.getAttribute("icon")}set icon(i){this.setAttribute("icon",i)}});var $=navigator.languages.includes("fr")||navigator.languages.includes("FR-fr");window.customElements.define("bea-website-home",class extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"}).innerHTML=`<style>
+  @import "./node_modules/@bea-gives/bea-color/index.css";
 
   :host {
     display: grid;
@@ -447,8 +447,8 @@ at: ${p[a-1].replace(/^\s*/,"")}`)}else throw new Error(r)}let o=this._attachedS
   #phone video {
     width: 100%;
     height: 100%;
-    -webkit-mask-image: url(./node_modules/@bea-org/bea-website-home/video-mask.svg);
-    mask-image: url(./node_modules/@bea-org/bea-website-home/video-mask.svg);
+    -webkit-mask-image: url(./node_modules/@bea-gives/bea-website-home/video-mask.svg);
+    mask-image: url(./node_modules/@bea-gives/bea-website-home/video-mask.svg);
     -webkit-mask-size: contain;
     mask-size: contain;
     -webkit-mask-position: center;
@@ -718,9 +718,9 @@ at: ${p[a-1].replace(/^\s*/,"")}`)}else throw new Error(r)}let o=this._attachedS
 <div id="media">
   <bea-website-backgroundcircle></bea-website-backgroundcircle>
   <div id="phone">
-    <video id="phone" poster="node_modules/@bea-org/bea-website-home/poster.png" autoplay loop muted playsinline>
-      <source src="node_modules/@bea-org/bea-website-home/userflow.webm" type="video/webm">
-      <source src="node_modules/@bea-org/bea-website-home/userflow.mp4" type="video/mp4">
+    <video id="phone" poster="node_modules/@bea-gives/bea-website-home/poster.png" autoplay loop muted playsinline>
+      <source src="node_modules/@bea-gives/bea-website-home/userflow.webm" type="video/webm">
+      <source src="node_modules/@bea-gives/bea-website-home/userflow.mp4" type="video/mp4">
     </video>
   </div>
   </damo-animation-lottie>
@@ -733,7 +733,7 @@ at: ${p[a-1].replace(/^\s*/,"")}`)}else throw new Error(r)}let o=this._attachedS
     <bea-icon icon="close" type="fill"></bea-icon>
   </button>
 </section>`,this.shadowRoot.querySelector("#emailformbutton").addEventListener("click",()=>{this.toggleAttribute("emailformopen",!0)}),this.shadowRoot.querySelector("#emailformclosebutton").addEventListener("click",()=>this.toggleAttribute("emailformopen",!1)),this.shadowRoot.querySelector("#overlay").addEventListener("click",()=>this.toggleAttribute("emailformopen",!1)),this.shadowRoot.querySelector("#emailformpopin").addEventListener("submit",()=>this.toggleAttribute("emailformopen",!1));let t=this.shadowRoot.querySelector("bea-website-animatedtext"),s=1500,r=$?["facile","s\xE9curis\xE9","sur-mesure"]:["easy","secure","on-demand"],o=["var(--bea-color-green)","var(--bea-color-blue)","var(--bea-color-coral)"],n=-1,a=async()=>{await t.hide(),n=(n+1)%r.length,t.innerHTML=r[n],t.style.color=o[n],await t.show(),setTimeout(a,s)};a()}});window.customElements.define("bea-website",class extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"}).innerHTML=`<style>
-  @import "./node_modules/@bea-org/bea-color/index.css";
+  @import "./node_modules/@bea-gives/bea-color/index.css";
 
   :host {
     display: block;

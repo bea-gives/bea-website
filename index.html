@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/svg+xml" href="node_modules/@bea-org/bea-logo/logo-icon.svg">
-  <link rel="alternate icon" href="node_modules/@bea-org/bea-logo/logo.png">
-  <link rel="mask-icon" href="node_modules/@bea-org/bea-logo/logo-light.svg" color="#6091ff">
+  <link rel="icon" type="image/svg+xml" href="node_modules/@bea-gives/bea-logo/logo-icon.svg">
+  <link rel="alternate icon" href="node_modules/@bea-gives/bea-logo/logo.png">
+  <link rel="mask-icon" href="node_modules/@bea-gives/bea-logo/logo-light.svg" color="#6091ff">
 
   <!-- Primary Meta Tags -->
   <title>Béa</title>
@@ -47,6 +47,30 @@
   <script src="https://polyfill.io/v3/polyfill.min.js?features=ResizeObserver%2CWebAnimations"></script>
 
   <script type="module" src="build/index.js"></script>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyCk5doPE5G6mEvtQAhtNxbdFaNlreRySLE",
+      authDomain: "bea-gives.firebaseapp.com",
+      projectId: "bea-gives",
+      storageBucket: "bea-gives.appspot.com",
+      messagingSenderId: "768946942266",
+      appId: "1:768946942266:web:8a25f60ac23bc38cf26003",
+      measurementId: "G-224RTBBG4D"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
 </body>
 
 </html>

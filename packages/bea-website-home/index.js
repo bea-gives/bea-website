@@ -17,7 +17,7 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
     super();
 
     this.attachShadow({ mode: 'open' }).innerHTML = `<style>
-  @import "./node_modules/@bea-org/bea-color/index.css";
+  @import "./node_modules/@bea-gives/bea-color/index.css";
 
   :host {
     display: grid;
@@ -57,8 +57,8 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
   #phone video {
     width: 100%;
     height: 100%;
-    -webkit-mask-image: url(./node_modules/@bea-org/bea-website-home/video-mask.svg);
-    mask-image: url(./node_modules/@bea-org/bea-website-home/video-mask.svg);
+    -webkit-mask-image: url(./node_modules/@bea-gives/bea-website-home/video-mask.svg);
+    mask-image: url(./node_modules/@bea-gives/bea-website-home/video-mask.svg);
     -webkit-mask-size: contain;
     mask-size: contain;
     -webkit-mask-position: center;
@@ -328,9 +328,9 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
 <div id="media">
   <bea-website-backgroundcircle></bea-website-backgroundcircle>
   <div id="phone">
-    <video id="phone" poster="node_modules/@bea-org/bea-website-home/poster.png" autoplay loop muted playsinline>
-      <source src="node_modules/@bea-org/bea-website-home/userflow.webm" type="video/webm">
-      <source src="node_modules/@bea-org/bea-website-home/userflow.mp4" type="video/mp4">
+    <video id="phone" poster="node_modules/@bea-gives/bea-website-home/poster.png" autoplay loop muted playsinline>
+      <source src="node_modules/@bea-gives/bea-website-home/userflow.webm" type="video/webm">
+      <source src="node_modules/@bea-gives/bea-website-home/userflow.mp4" type="video/mp4">
     </video>
   </div>
   </damo-animation-lottie>

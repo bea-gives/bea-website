@@ -1,9 +1,9 @@
 {
-  "name": "@bea-org/bea-website",
+  "name": "@bea-gives/bea-website",
   "private": true,
   "version": "0.0.0",
   "dependencies": {
-    "@bea-org/bea-color": "^0.0.3",
-    "@bea-org/bea-font": "^0.0.4"
+    "@bea-gives/bea-color": "^0.0.3",
+    "@bea-gives/bea-font": "^0.0.4"
   }
 }

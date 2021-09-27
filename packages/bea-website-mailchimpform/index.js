@@ -13,7 +13,7 @@ window.customElements.define('bea-website-mailchimpform', class extends HTMLElem
     super();
 
     this.attachShadow({ mode: 'open' }).innerHTML = `<style>
-  @import "./node_modules/@bea-org/bea-color/index.css";
+  @import "./node_modules/@bea-gives/bea-color/index.css";
 
   :host {
     display: grid;

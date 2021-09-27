@@ -28,6 +28,20 @@
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.12.11.tgz#9ce3595bcd74bc5c466905e86c535b8b25011e79"
   integrity sha512-N3UxG+uuF4CMYoNj8AhnbAcJF0PiuJ9KHuy1lQmkYsxTer/MAH9UBNHsBoAX/4s6NvlDD047No8mYVGGzLL4hg==
 
+"@damienmortini/element-animation-ticker@^0.0.104":
+  version "0.0.104"
+  resolved "https://registry.yarnpkg.com/@damienmortini/element-animation-ticker/-/element-animation-ticker-0.0.104.tgz#8473078e2331954cdb273f42e7ad0b059cbb2f43"
+  integrity sha512-zCMI+GQFtLFoR8pKn2ZE8UkCSk7LHO62l6Im2pckNSc0hjf/doyBgHtHUHyqxxSQCATdgOA56tGKFm0FpaM2Cg==
+  dependencies:
+    "@damienmortini/core" "^0.2.105"
+
+"@damienmortini/element-glslcanvas@^0.0.22":
+  version "0.0.22"
+  resolved "https://registry.yarnpkg.com/@damienmortini/element-glslcanvas/-/element-glslcanvas-0.0.22.tgz#21c45cff84a688a0fc05f6db9072b1f81ab5fd06"
+  integrity sha512-JHDT8vHGbiNRI9FLzB2JVA1oCsmdVzDqA82Iu4Fc3piFjmTpKd90NiUMO8Atw1Atod8y1kQVJ2HXAMjKbe16dA==
+  dependencies:
+    "@damienmortini/core" "^0.2.105"
+
 "@eslint/eslintrc@^0.4.3":
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-0.4.3.tgz#9e42981ef035beb3dd49add17acb96e8ff6f394c"
@@ -955,7 +969,7 @@ lodash@^4.17.14:
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
   integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
 
-lottie-web@^5.7.12:
+lottie-web@^5.7.13:
   version "5.7.13"
   resolved "https://registry.yarnpkg.com/lottie-web/-/lottie-web-5.7.13.tgz#c4087e4742c485fc2c4034adad65d1f3fcd438b0"
   integrity sha512-6iy93BGPkdk39b0jRgJ8Zosxi8QqcMP5XcDvg1f0XAvEkke6EMCl6BUO4Lu78dpgvfG2tzut4QJ+0vCrfbrldQ==
@@ -996,7 +1010,7 @@ mime-db@1.49.0:
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.49.0.tgz#f3dfde60c99e9cf3bc9701d687778f537001cbed"
   integrity sha512-CIc8j9URtOVApSFCQIF+VBkX1RwXp/oMMOrqdyXSBXq5RWNEsRfyj1kiRnQgmNXmHxPoFIxOroKA3zcU9P+nAA==
 
-mime-types@^2.1.31:
+mime-types@^2.1.32:
   version "2.1.32"
   resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.32.tgz#1d00e89e7de7fe02008db61001d9e02852670fd5"
   integrity sha512-hJGaVS4G4c9TSMYh2n6SQAGrC4RnfU+daP8G7cSCmaqNjiOoUY0VHCMS42pxnQmVF1GWwFhbHWn3RIxCqTmZ9A==

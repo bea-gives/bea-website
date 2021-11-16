@@ -19,9 +19,9 @@
   ],
   "devDependencies": {
     "@damienmortini/server": "^1.0.31",
-    "esbuild": "^0.13.2",
-    "eslint": "^7.32.0",
+    "esbuild": "^0.13.14",
+    "eslint": "^8.2.0",
     "eslint-config-google": "^0.14.0",
-    "yarn": "^1.22.11"
+    "yarn": "^1.22.17"
   }
 }

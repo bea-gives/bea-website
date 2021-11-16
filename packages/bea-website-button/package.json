@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "dependencies": {
     "@damienmortini/core": "^0.2.90",
-    "@damienmortini/element-animation-ticker": "^0.0.106",
-    "@damienmortini/element-glslcanvas": "^0.0.24"
+    "@damienmortini/element-animation-ticker": "^0.0.111",
+    "@damienmortini/element-glslcanvas": "^0.0.37"
   }
 }

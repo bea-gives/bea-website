@@ -328,7 +328,7 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
 <div id="media">
   <bea-website-backgroundcircle></bea-website-backgroundcircle>
   <div id="phone">
-    <video id="phone" poster="node_modules/@bea-gives/bea-website-home/poster.png" autoplay loop muted playsinline>
+    <video id="phone" poster="node_modules/@bea-gives/bea-website-home/poster.jpg" autoplay loop muted playsinline>
       <source src="node_modules/@bea-gives/bea-website-home/userflow.webm" type="video/webm">
       <source src="node_modules/@bea-gives/bea-website-home/userflow.mp4" type="video/mp4">
     </video>

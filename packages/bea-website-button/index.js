@@ -1,8 +1,8 @@
 import AnimationTickerElement from '../../@damienmortini/element-animation-ticker/index.js';
 import '../../@damienmortini/element-glslcanvas/index.js';
-import Color from '../../@damienmortini/core/math/Color.js';
+import { styleToRGBA } from '../../@damienmortini/core/math/Color.js';
 import Vector2 from '../../@damienmortini/core/math/Vector2.js';
-import Easing from '../../@damienmortini/core/math/Easing.js';
+import { powerInOut } from '../../@damienmortini/core/math/Easing.js';
 import { animate } from '../../@damienmortini/core/util/Animation.js';
 
 const HOVER_MARGIN = 15;
@@ -136,7 +136,7 @@ window.customElements.define('bea-website-button', class extends AnimationTicker
         _pointerHover: 1,
       }, {
         duration: 600,
-        easing: (x) => Easing.powerInOut(x),
+        easing: (x) => powerInOut(x),
       });
     });
 
@@ -170,7 +170,7 @@ window.customElements.define('bea-website-button', class extends AnimationTicker
     this._pointerPositionEased.lerp(this._pointerPosition, .2);
     this._glslCanvas.draw({
       uniforms: {
-        color: Color.styleToRGBA(getComputedStyle(this).getPropertyValue('background-color')),
+        color: styleToRGBA(getComputedStyle(this).getPropertyValue('background-color')),
         pointerHover: this._pointerHover,
         pointerPosition: this._pointerPositionEased,
       },

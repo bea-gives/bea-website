@@ -2,7 +2,7 @@ import esbuild from 'esbuild';
 import { Server } from '@damienmortini/server';
 
 const esBuildOptions = {
-  entryPoints: ['node_modules/@bea-gives/bea-website/index.js'],
+  entryPoints: ['node_modules/@beagives/bea-website/index.js'],
   bundle: true,
   minify: true,
   format: 'esm',

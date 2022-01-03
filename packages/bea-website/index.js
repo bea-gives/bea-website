@@ -14,7 +14,7 @@ window.customElements.define('bea-website', class extends HTMLElement {
     super();
 
     this.attachShadow({ mode: 'open' }).innerHTML = `<style>
-  @import "./node_modules/@bea-gives/bea-color/index.css";
+  @import "./node_modules/@beagives/bea-color/index.css";
 
   :host {
     display: block;

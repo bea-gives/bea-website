@@ -1,5 +1,5 @@
-import esbuild from 'esbuild';
-import { Server } from '@damienmortini/server';
+import esbuild from 'esbuild'
+import { Server } from '@damienmortini/server'
 
 const esBuildOptions = {
   entryPoints: ['node_modules/@beagives/bea-website/index.js'],
@@ -9,25 +9,26 @@ const esBuildOptions = {
   preserveSymlinks: true,
   target: 'safari13',
   outfile: 'build/index.js',
-};
+}
 
 switch (process.argv[2]) {
-  case 'start':
+  case 'start': {
     const server = new Server({
       watch: true,
       watchIgnore: ['**/*.js', '**/*.css'],
-    });
+    })
 
     esbuild.build({
       ...esBuildOptions,
       watch: {
         onRebuild() {
-          server.refresh();
+          server.refresh()
         },
       },
-    });
-    break;
+    })
+    break
+  }
   case 'build':
-    esbuild.build(esBuildOptions);
-    break;
+    esbuild.build(esBuildOptions)
+    break
 }

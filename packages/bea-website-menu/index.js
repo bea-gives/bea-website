@@ -1,15 +1,14 @@
-import '../bea-a/index.js';
-import '../bea-logo/index.js';
+import '@beagives/bea-a/index.js'
+import '@beagives/bea-logo/index.js'
 
 /**
- * Entry point element
  * @hideconstructor
  * @example
  * <bea-website-menu></bea-website-menu>
  */
 window.customElements.define('bea-website-menu', class extends HTMLElement {
   constructor() {
-    super();
+    super()
 
     this.attachShadow({ mode: 'open' }).innerHTML = `
       <style>
@@ -32,6 +31,6 @@ window.customElements.define('bea-website-menu', class extends HTMLElement {
       <bea-a href="#principle">Principe</bea-a>
       <bea-a href="#trust">Confiance</bea-a>
       <bea-a href="#community">Communauté</bea-a>
-    `;
+    `
   }
-});
+})

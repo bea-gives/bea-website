@@ -1,12 +1,11 @@
 /**
- * Entry point element
  * @hideconstructor
  * @example
  * <bea-website-backgroundcircle></bea-website-backgroundcircle>
  */
 window.customElements.define('bea-website-backgroundcircle', class extends HTMLElement {
   constructor() {
-    super();
+    super()
 
     this.attachShadow({ mode: 'open' }).innerHTML = `<style>
   :host {
@@ -53,18 +52,18 @@ window.customElements.define('bea-website-backgroundcircle', class extends HTMLE
 </style>
 <svg id="bubble" width="1" height="1" viewBox="0 0 1 1" fill="none" xmlns="http://www.w3.org/2000/svg">
   <circle cx=".5" cy=".5" r=".5" />
-</svg>`;
+</svg>`
 
-    const svg = this.shadowRoot.querySelector('svg');
+    const svg = this.shadowRoot.querySelector('svg')
 
     const resizeObserver = new ResizeObserver((entries) => {
-      const width = entries[0].contentRect.width;
-      const height = entries[0].contentRect.height;
+      const width = entries[0].contentRect.width
+      const height = entries[0].contentRect.height
 
-      const size = Math.max(width, height);
+      const size = Math.max(width, height)
 
-      svg.style.setProperty('--size', `${size}px`);
-    });
-    resizeObserver.observe(this);
+      svg.style.setProperty('--size', `${size}px`)
+    })
+    resizeObserver.observe(this)
   }
-});
+})

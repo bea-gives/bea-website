@@ -6,6 +6,7 @@ const esBuildOptions = {
   bundle: true,
   minify: true,
   format: 'esm',
+  sourcemap: true,
   preserveSymlinks: true,
   target: 'safari13',
   outfile: 'build/index.js',

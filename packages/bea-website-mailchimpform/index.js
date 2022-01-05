@@ -1,16 +1,15 @@
-import '../bea-website-button/index.js';
+import '@beagives/bea-website-button/index.js'
 
-const isFR = navigator.languages.includes('fr') || navigator.languages.includes('FR-fr');
+const isFR = navigator.languages.includes('fr') || navigator.languages.includes('FR-fr')
 
 /**
- * Entry point element
  * @hideconstructor
  * @example
  * <bea-website-mailchimpform></bea-website-mailchimpform>
  */
 window.customElements.define('bea-website-mailchimpform', class extends HTMLElement {
   constructor() {
-    super();
+    super()
 
     this.attachShadow({ mode: 'open' }).innerHTML = `<style>
   @import "./node_modules/@beagives/bea-color/index.css";
@@ -61,20 +60,20 @@ window.customElements.define('bea-website-mailchimpform', class extends HTMLElem
   <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
       name="b_9478a676a23e73e9922afc992_9e77fea305" tabindex="-1" value=""></div>
   <bea-website-button>${isFR ? 'M\'inscrire' : 'Subscribe'}</bea-website-button>
-</form>`;
+</form>`
 
-    const submitButton = this.shadowRoot.querySelector('bea-website-button');
-    const form = this.shadowRoot.querySelector('form');
+    const submitButton = this.shadowRoot.querySelector('bea-website-button')
+    const form = this.shadowRoot.querySelector('form')
 
     submitButton.addEventListener('click', () => {
       this.dispatchEvent(new Event('submit', {
         bubbles: true,
-      }));
-      form.submit();
-    });
+      }))
+      form.submit()
+    })
 
     form.addEventListener('submit', (event) => {
-      this.dispatchEvent(new Event('submit', event));
-    });
+      this.dispatchEvent(new Event('submit', event))
+    })
   }
-});
+})

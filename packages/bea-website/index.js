@@ -1,17 +1,16 @@
-import '../bea-font/index.js';
+import '@beagives/bea-font/index.js'
+import '@beagives/bea-logo/index.js'
 
-import '../bea-website-menu/index.js';
-import '../bea-website-home/index.js';
+import '@beagives/bea-website-home/index.js'
 
 /**
- * Entry point element
  * @hideconstructor
  * @example
  * <bea-website></bea-website>
  */
 window.customElements.define('bea-website', class extends HTMLElement {
   constructor() {
-    super();
+    super()
 
     this.attachShadow({ mode: 'open' }).innerHTML = `<style>
   @import "./node_modules/@beagives/bea-color/index.css";
@@ -68,7 +67,6 @@ window.customElements.define('bea-website', class extends HTMLElement {
   <bea-logo icon></bea-logo>
   <h1 id="name">Béa</h1>
 </div>
-<!-- <bea-website-menu></bea-website-menu> -->
-<bea-website-home></bea-website-home>`;
+<bea-website-home></bea-website-home>`
   }
-});
+})

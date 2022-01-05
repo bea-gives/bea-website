@@ -3,8 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "dependencies": {
-    "@beagives/bea-color": "^0.0.4",
-    "@beagives/bea-font": "^0.0.5",
-    "@beagives/bea-logo": "^0.0.1"
+    "@beagives/bea-color": "^0.0.5",
+    "@beagives/bea-font": "^0.0.6",
+    "@beagives/bea-logo": "^0.0.5"
   }
 }

@@ -8,17 +8,18 @@
     "build": "node scripts.js build",
     "start": "node scripts.js start",
     "test": "eslint packages",
-    "update": "npm i"
+    "update": "npm update",
+    "upgrade": "ncu --deep -u"
   },
   "author": "Damien Mortini",
   "workspaces": [
-    "packages/*",
-    "../bea/packages/**/*"
+    "packages/*"
   ],
   "devDependencies": {
     "@damienmortini/eslint-config": "^0.0.3",
     "@damienmortini/server": "^1.0.52",
     "esbuild": "^0.14.10",
-    "eslint": "^8.6.0"
+    "eslint": "^8.6.0",
+    "npm-check-updates": "^12.1.0"
   }
 }

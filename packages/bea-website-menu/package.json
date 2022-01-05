@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "dependencies": {
-    "@beagives/bea-a": "^0.0.3",
-    "@beagives/bea-logo": "^0.0.4"
+    "@beagives/bea-a": "^0.0.4",
+    "@beagives/bea-logo": "^0.0.5"
   }
 }

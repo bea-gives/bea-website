@@ -19,15 +19,23 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
   @import "./node_modules/@beagives/bea-color/index.css";
 
   :host {
-    display: grid;
+    display: block;
     position: relative;
+    font-family: Pangram;
+  }
+
+  #container {
+    display: grid;
     line-height: 1;
     grid-auto-columns: minmax(0, 1fr);
     grid-template-areas: "content media";
-    font-family: Pangram;
     justify-items: center;
     align-items: center;
-  }
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+  } 
 
   bea-website-backgroundcircle {
     position: absolute;
@@ -189,7 +197,7 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
   }
 
   @media (min-width: 1280px) {
-    :host {
+    #container {
       grid-template-rows: minmax(0, 1fr) 0;
     }
 
@@ -244,7 +252,7 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
   }
 
   @media (max-width: 1280px) {
-    :host {
+    #container {
       grid-template-areas: "emailbutton""content""media";
       grid-template-rows: 84px auto auto;
       gap: 32px;
@@ -314,25 +322,27 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
     }
   }
 </style>
-<div id="content">
-  <h2>
-    <!-- <bea-icon id="asterisk" icon="asterisk" type="fill"></bea-icon> -->
-    <span id="logo">Béa</span>
-    <span>${isFR ? 'le don' : 'donation<br>made'}</span>
-    <bea-website-animatedtext></bea-website-animatedtext>
-  </h2>
-  <p>${isFR ? 'L’application mobile bénévole qui simplifie <span>(enfin)</span> le don aux associations' : 'The nonprofit app making donation <span>(finally)</span> effortless'}</p>
-  <bea-website-button id="emailformbutton">${isFR ? 'Tenez-moi informé(e)' : 'Keep me posted!'}</bea-website-button>
-</div>
-<div id="media">
-  <bea-website-backgroundcircle></bea-website-backgroundcircle>
-  <div id="phone">
-    <video id="phone" poster="node_modules/@beagives/bea-website-home/poster.jpg" autoplay loop muted playsinline>
-      <source src="node_modules/@beagives/bea-website-home/userflow.webm" type="video/webm">
-      <source src="node_modules/@beagives/bea-website-home/userflow.mp4" type="video/mp4">
-    </video>
+<div id="container">
+  <div id="content">
+    <h2>
+      <!-- <bea-icon id="asterisk" icon="asterisk" type="fill"></bea-icon> -->
+      <span id="logo">Béa</span>
+      <span>${isFR ? 'le don' : 'donation<br>made'}</span>
+      <bea-website-animatedtext></bea-website-animatedtext>
+    </h2>
+    <p>${isFR ? 'L’application mobile bénévole qui simplifie <span>(enfin)</span> le don aux associations' : 'The nonprofit app making donation <span>(finally)</span> effortless'}</p>
+    <bea-website-button id="emailformbutton">${isFR ? 'Tenez-moi informé(e)' : 'Keep me posted!'}</bea-website-button>
   </div>
-  </damo-animation-lottie>
+  <div id="media">
+    <bea-website-backgroundcircle></bea-website-backgroundcircle>
+    <div id="phone">
+      <video id="phone" poster="node_modules/@beagives/bea-website-home/poster.jpg" autoplay loop muted playsinline>
+        <source src="node_modules/@beagives/bea-website-home/userflow.webm" type="video/webm">
+        <source src="node_modules/@beagives/bea-website-home/userflow.mp4" type="video/mp4">
+      </video>
+    </div>
+    </damo-animation-lottie>
+  </div>
 </div>
 <div id="overlay"></div>
 <section id="emailformpopin" hidden>

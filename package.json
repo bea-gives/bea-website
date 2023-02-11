@@ -20,6 +20,6 @@
     "@damienmortini/server": "^1.0.52",
     "esbuild": "^0.14.10",
     "eslint": "^8.6.0",
-    "npm-check-updates": "^12.1.0"
+    "npm-check-updates": "^16.7.4"
   }
 }
